@@ -35,6 +35,14 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid rgba(22, 114, 83, 0.35);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
 .container {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
@@ -366,6 +374,11 @@ h2 {
   border-radius: 16px;
 }
 
+.page-card .table {
+  display: block;
+  overflow-x: auto;
+}
+
 .table th,
 .table td {
   border-bottom: 1px solid var(--line);
@@ -415,7 +428,14 @@ h2 {
   }
 
   .nav-links {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 8px;
+    column-gap: 14px;
+    text-align: right;
+    max-width: 60%;
+    font-size: 13px;
   }
 
   .hero {
